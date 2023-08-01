@@ -1,0 +1,26 @@
+config {
+    type: "declaration",
+    database: "bigquery-public-data",
+    schema: "austin_crime",
+    name: "crime",
+    description: "Austin Crime public Dataset",
+    columns: {
+        unique_key: "Unique identifier for the record.",	
+        address: "Full address where the incident occurred.",	
+        census_tract: "",
+        clearance_date: "",
+        clearance_status: "",
+        council_district_code: "Indicates the council district code where the incident occurred.",	
+        description: "The subcategory of the primary description.",	
+        district: "Indicates the police district where the incident occurred.",	
+        latitude: "",
+        longitude: "",
+        location: "location_description Description of the location where the incident occurred.",	
+        primary_type: "The primary description of the NIBRS/UCR code.",	
+        timestamp: "Time when the incident occurred. This is sometimes a best estimate.",	
+        x_coordinate: "The x coordinate of the location where the incident occurred.",	
+        y_coordinate: "The y coordinate of the location where the incident occurred.",	
+        year: "Indicates the year in which the incident occurred.",	
+        zipcode: "Indicates the zipcode where the incident occurred.",	
+    }
+}

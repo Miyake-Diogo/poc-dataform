@@ -1,0 +1,23 @@
+config {
+    type: "table",
+    schema: "poc_dmiyake_staging",
+    name: "total_crimes_by_description",
+    description: "Total Crimes by Description",
+    assertions: {
+        nonNull: ["description"]
+    }, 
+    bigquery: {
+        labels: {
+          "ccmdb-emx_data": "emx_data",
+          "poc": "miyake-poc-dataform"
+        }
+    },
+    columns: {
+        description: "The subcategory of the primary description.",
+        total: "Total count of Crimes by description and clearence status"
+    }
+
+}
+SELECT description, count(*) as total
+    FROM ${ref("crime")}
+GROUP BY  description
